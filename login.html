@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Match IT</title>
+    <link rel="stylesheet" href="login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Jost:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Match IT</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="matches.html" class="nav-link">Matches</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <img src="images/virushkaaaaa.jpg" class="avatar" alt="User" />
+    </header>
+    <!-- Login Card -->
+    <div class="login-container">
+        <div class="left-side">
+            <div class="top-image-animate">
+                <img src="images/wed3-removebg-preview.png" alt="Love Birds" />
+            </div>
+            <h2 style="font-size:1.5rem;font-weight:100;">Now</h2>
+            <h1>Find<br> your life <br>partner</h1>
+            <p>Easy and fast.</p>
+            <div class="moving-ground"></div>
+            <div class="moving-ground"></div>
+        </div>
+
+        <div class="right-side">
+            <h4>START FOR FREE</h4>
+            <h2>Sign in to Matrimony</h2>
+            <p>Not a member? <a href="register.html">Sign up now</a></p>
+            <hr />
+            <form class="formTop">
+                <label>Email:</label>
+                <input type="email" placeholder="Enter email" required class="form" />
+
+                <label>Password:</label>
+                <input type="password" placeholder="Enter password" required class="form" />
+
+                <div class="options">
+                    <label><input type="checkbox" /> Remember me</label>
+                </div>
+
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-column" data-aos="fade-up">
+                <h2 class="footer-logo">Match <span>IT</span></h2>
+                <p class="footer-tagline">Where hearts meet and stories begin 💞</p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                <h3>Subscribe</h3>
+                <p>Get the latest matches & wedding tips </p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email" required />
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p id="newsletter-msg" class="newsletter-msg"></p>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                <h3>Connect</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Match IT. Made with 💖 for perfect matches.</p>
+        </div>
+    </footer>
+
+    <img src="images/wed2-removebg-preview.png" alt="Leaf" class="leaf-corner top-left">
+    <img src="images/wed2-removebg-preview.png" alt="Leaf" class="leaf-corner top-right">
+
+    <!-- Grass Background -->
+    <!-- <div class="grass"></div> -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('shrink', window.scrollY > 50);
+        });
+
+        function toggleMenu(icon) {
+            const nav = document.getElementById('navbar-links');
+            nav.classList.toggle('show');
+            icon.classList.toggle('active');
+        }
+
+        // Smooth scroll and auto-close
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const target = this.getAttribute('href');
+
+                // Only prevent default if it's an in-page link
+                if (target.startsWith('#')) {
+                    e.preventDefault();
+
+                    const section = document.querySelector(target);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Close the menu on mobile
+                    document.getElementById('navbar-links').classList.remove('show');
+                    document.getElementById('hamburger').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

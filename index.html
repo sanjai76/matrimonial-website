@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match IT - Matrimony</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Cursive Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Match IT</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="matches.html" class="nav-link">Matches</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <img src="images/virushkaaaaa.jpg" class="avatar" alt="User" />
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h2 class="hero-main-heading">
+                Welcome to <span>Match IT</span> — Where Love Begins
+            </h2>
+
+            <div class="div hero-content">
+                <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+                <p>Join 100,000+ happy members today</p>
+                <button onclick="scrollToRegister()">Register Now</button>
+
+                <div class="single-quote-container">
+                    <p id="quoteText">"Every love story is beautiful, but ours is my favorite."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image" data-aos="zoom-in">
+                <img src="images/virushkaaaaa.jpg" alt="Happy Couple" />
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <h2 class="cursive">About Match IT</h2>
+                <p>
+                    At <strong>Match IT</strong>, we believe in the magic of meaningful connections. Our mission is to
+                    help individuals discover lasting love by combining traditional values with modern matchmaking.
+                    Whether you're looking for companionship or a lifelong partner, we're here to make your journey
+                    joyful and seamless.
+                </p>
+                <p>
+                    Join thousands of happy couples who began their love stories with us. Your perfect match could be
+                    just one click away.
+                </p>
+                <a href="about.html">Start Your Story</a>
+            </div>
+        </div>
+    </section>
+    <!-- 🌸 Our Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title"> Our Services</h2>
+        <p class="section-subtitle">We offer everything to make your match meaningful.</p>
+
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card" data-aos="fade-up">
+                <img src="images/suc5.jpg" alt="Matchmaking" />
+                <h3>Matchmaking</h3>
+                <p>Find profiles that align with your preferences and values.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/suc7.jpg" alt="Private Chat" />
+                <h3>Private Messaging</h3>
+                <p>Connect securely with potential partners through chat.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/suc10.jpg" alt="Profile Verification" />
+                <h3>Verified Profiles</h3>
+                <p>Trustworthy profiles verified through ID and phone validation.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/suc6.jpg" alt="Support" />
+                <h3>24/7 Support</h3>
+                <p>Get help anytime with our dedicated support team.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="matches" id="matches">
+        <h2 class="cursive" data-aos="fade-up">Top Matches</h2>
+        <div class="matches-grid">
+            <!-- Match 1 -->
+            <div class="match-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/match2.jpg" alt="Profile 1" />
+                <div class="match-info">
+                    <h3>Anjali, 26</h3>
+                    <p>Software Engineer, Bangalore</p>
+                    <button onclick="openModal('modalAnjali')">View Profile</button>
+                </div>
+            </div>
+            <!-- Profile Modal -->
+            <div class="profile-modal" id="modalAnjali">
+                <div class="profile-modal-content">
+                    <span class="close-btn" onclick="closeModal('modalAnjali')">&times;</span>
+                    <div class="modal-left">
+                        <img src="images/match2.jpg" alt="Anjali" />
+                    </div>
+                    <div class="modal-right">
+                        <h3 class="cursive">Anjali, 26</h3>
+                        <p><strong>Profession:</strong> Software Engineer</p>
+                        <p><strong>Location:</strong> Bangalore</p>
+                        <p><strong>Education:</strong> B.Tech - Computer Science</p>
+                        <p><strong>Hobbies:</strong> Reading, Cooking, Travel</p>
+                        <p><strong>Looking for:</strong> A supportive life partner who values family and dreams big.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match 2 -->
+            <div class="match-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/match1.jpg" alt="Profile 2" />
+                <div class="match-info">
+                    <h3>Rahul, 29</h3>
+                    <p>Business Analyst, Mumbai</p>
+                    <button onclick="openModal('modalRahul')">View Profile</button>
+                </div>
+            </div>
+            <!-- Rahul Modal -->
+            <div class="profile-modal" id="modalRahul">
+                <div class="profile-modal-content">
+                    <span class="close-btn" onclick="closeModal('modalRahul')">&times;</span>
+                    <div class="modal-left">
+                        <img src="images/match1.jpg" alt="Rahul" />
+                    </div>
+                    <div class="modal-right">
+                        <h3 class="cursive">Rahul, 29</h3>
+                        <p><strong>Profession:</strong> Business Analyst</p>
+                        <p><strong>Location:</strong> Mumbai</p>
+                        <p><strong>Education:</strong> MBA - Finance</p>
+                        <p><strong>Hobbies:</strong> Cricket, Podcasts, Travelling</p>
+                        <p><strong>Looking for:</strong> Someone who shares a passion for growth and family values.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match 3 -->
+            <div class="match-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/sai3.jpg" alt="Profile 3" />
+                <div class="match-info">
+                    <h3>Pooja, 27</h3>
+                    <p>Fashion Designer, Delhi</p>
+                    <button onclick="openModal('modalPooja')">View Profile</button>
+                </div>
+            </div>
+            <!-- Pooja Modal -->
+            <div class="profile-modal" id="modalPooja">
+                <div class="profile-modal-content">
+                    <span class="close-btn" onclick="closeModal('modalPooja')">&times;</span>
+                    <div class="modal-left">
+                        <img src="images/sai3.jpg" alt="Pooja" />
+                    </div>
+                    <div class="modal-right">
+                        <h3 class="cursive">Pooja, 27</h3>
+                        <p><strong>Profession:</strong> Fashion Designer</p>
+                        <p><strong>Location:</strong> Delhi</p>
+                        <p><strong>Education:</strong> B.Des - NIFT</p>
+                        <p><strong>Hobbies:</strong> Art, Styling, Blogging</p>
+                        <p><strong>Looking for:</strong> A creative, open-minded partner who respects independence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match 4 -->
+            <div class="match-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/b2.jpeg" alt="Profile 4" />
+                <div class="match-info">
+                    <h3>Vikram, 30</h3>
+                    <p>Doctor, Chennai</p>
+                    <button onclick="openModal('modalVikram')">View Profile</button>
+                </div>
+            </div>
+            <div class="profile-modal" id="modalVikram">
+                <div class="profile-modal-content">
+                    <span class="close-btn" onclick="closeModal('modalVikram')">&times;</span>
+                    <div class="modal-left">
+                        <img src="images/b2.jpeg" alt="Vikram" />
+                    </div>
+                    <div class="modal-right">
+                        <h3 class="cursive">Vikram, 30</h3>
+                        <p><strong>Profession:</strong> Doctor</p>
+                        <p><strong>Location:</strong> Chennai</p>
+                        <p><strong>Education:</strong> MBBS, MD</p>
+                        <p><strong>Hobbies:</strong> Fitness, Reading, Philanthropy</p>
+                        <p><strong>Looking for:</strong> A compassionate, sincere partner to grow old with.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Toggle Button -->
+        <div class="more-matches-btn">
+            <button id="toggleMatchesBtn" onclick="toggleMoreMatches()">More Matches</button>
+        </div>
+
+        <!-- More Matches Grid Section -->
+        <section class="more-matches-section hidden" id="moreMatches">
+            <div class="more-matches-grid">
+
+                <!-- Card 1 -->
+                <div class="match-card" data-aos="fade-up">
+                    <img src="images/more3.jpg" alt="Neha" style="object-fit: contain;">
+                    <div class="match-info">
+                        <h3>Neha, 25</h3>
+                        <p>Architect, Pune</p>
+                        <p>B.Arch | Painting, Hiking</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="match-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/more1.jpg" alt="Arjun" style="object-fit: contain;">
+                    <div class="match-info">
+                        <h3>Arjun, 28</h3>
+                        <p>Data Scientist, Hyderabad</p>
+                        <p>M.Tech | AI, Fitness</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="match-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/more4.jpg" alt="Sneha" style="object-fit: contain;">
+                    <div class="match-info">
+                        <h3>Sneha, 26</h3>
+                        <p>HR Manager, Kochi</p>
+                        <p>MBA HR | Music, Cooking</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="match-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/more2.avif" alt="Ravi" style="object-fit: contain;">
+                    <div class="match-info">
+                        <h3>Ravi, 30</h3>
+                        <p>Lawyer, Delhi</p>
+                        <p>LLB | Reading, Debate</p>
+                    </div>
+                </div>
+                <div class="match-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/rahul.jpeg" alt="Ravi" style="object-fit: contain;">
+                    <div class="match-info">
+                        <h3>Ranveer, 30</h3>
+                        <p>Actor, Delhi</p>
+                        <p>Acting</p>
+                    </div>
+                </div>
+
+                <!-- Add more as needed in grid -->
+            </div>
+        </section>
+
+    </section>
+    <section class="register" id="register">
+        <div class="register-container">
+            <!-- Left: Form Content -->
+            <div class="register-left" data-aos="fade-right">
+                <h2 class="cursive">Register Now</h2>
+                <p class="register-subtext">Find your perfect match today</p>
+
+                <form class="register-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="email" placeholder="Email Address" required />
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Age" required />
+                        <input type="text" placeholder="Location" required />
+                    </div>
+
+                    <div class="form-row">
+                        <select required>
+                            <option disabled selected>Looking for</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <select required>
+                            <option disabled selected>Religion</option>
+                            <option>Hindu</option>
+                            <option>Muslim</option>
+                            <option>Christian</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <textarea placeholder="Short Bio / About Yourself" rows="4" required></textarea>
+
+                    <button type="submit">Submit Profile</button>
+                </form>
+            </div>
+
+            <!-- Right: Image Card (starts directly beside the text) -->
+            <div class="register-right" data-aos="fade-left">
+                <div class="bubble-container">
+                    <div class="image-stack">
+                        <div class="stack-card card-1">
+                            <img src="images/rutu.avif" alt="Match 1" />
+                        </div>
+                        <div class="stack-card card-2">
+                            <img src="images/anjali.avif" alt="Match 2" />
+                        </div>
+                        <div class="stack-card card-3">
+                            <img src="images/rahulTwo.avif" alt="Match 3" />
+                        </div>
+                    </div>
+                    <!-- ✅ Success Popup Modal -->
+                    <div id="successPopup" class="success-popup">
+                        <div class="popup-content">
+                            <h3>🎉 Submitted Successfully!</h3>
+                            <p>Thank you for registering. We'll get back to you soon!</p>
+                            <button onclick="closePopup()">Close</button>
+                        </div>
+                    </div>
+                    <!-- Bubbles -->
+                    <div class="bubbles">
+                        <span style="--i:1;"></span>
+                        <span style="--i:3;"></span>
+                        <span style="--i:5;"></span>
+                        <span style="--i:7;"></span>
+                        <span style="--i:9;"></span>
+                        <span style="--i:11;"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="success-stories" id="success">
+        <h2 class="section-title">Success Stories</h2>
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Repeat this card 10 times with different content/images -->
+                <div class="story-card">
+                    <img src="images/anjali.avif" alt="Couple 1" />
+                    <p>“We found each other on Match IT and now we're happily married!”</p>
+                    <span>- Priya & Arjun</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/sanju.jpg" alt="Couple 2" />
+                    <p>“Thank you Match IT for helping us find love!”</p>
+                    <span>- Anjali & Rohit</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/rutu.avif" alt="Couple 3" />
+                    <p>“A perfect platform to meet your soulmate.”</p>
+                    <span>- Meena & Karthik</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc4.avif" alt="Couple 4" />
+                    <p>“Match IT made it happen in just 2 months!”</p>
+                    <span>- Ravi & Sneha</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc5.jpg" alt="Couple 5" />
+                    <p>“We matched, met, and married. Thank you!”</p>
+                    <span>- Dev & Riya</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc6.jpg" alt="Couple 6" />
+                    <p>“Grateful for this lovely journey we began here.”</p>
+                    <span>- Neha & Suresh</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc7.jpg" alt="Couple 7" />
+                    <p>“From strangers to soulmates 💕”</p>
+                    <span>- Swati & Deepak</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc8.jpeg" alt="Couple 8" />
+                    <p>“Match IT brought us together forever.”</p>
+                    <span>- Kiran & Kavya</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc9.jpg" alt="Couple 9" />
+                    <p>“Best platform for serious relationships!”</p>
+                    <span>- Rahul & Anitha</span>
+                </div>
+                <div class="story-card">
+                    <img src="images/suc10.jpg" alt="Couple 10" />
+                    <p>“Match IT is the beginning of our love story.”</p>
+                    <span>- Ajay & Shruti</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 💍 Wedding Planner Section -->
+    <section class="wedding-planner" id="planner">
+        <h2 class="section-title">Wedding Services</h2>
+        <div class="service-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card" data-aos="fade-up">
+                <img src="images/backFourrrrr.jpg" alt="Decorator" />
+                <h3>Venue Decoration</h3>
+                <p>Floral, traditional, and themed decor for your dream day.</p>
+                <span>₹30,000 - ₹1,00,000</span>
+                <button onclick="openBookingForm('Venue Decoration')">Book Now</button>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/cat.jpg" alt="Catering" />
+                <h3>Catering Services</h3>
+                <p>Delicious multi-cuisine buffet, snacks & sweets.</p>
+                <span>₹25,000 - ₹1,50,000</span>
+                <button onclick="openBookingForm('Catering Services')">Book Now</button>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/pho.jpg" alt="Photography" />
+                <h3>Photography</h3>
+                <p>Capture your big moments with cinematic photos & video.</p>
+                <span>₹15,000 - ₹80,000</span>
+                <button onclick="openBookingForm('Photography')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💌 Booking Form Popup -->
+    <div class="booking-popup" id="bookingPopup">
+        <div class="booking-form-box">
+            <h3>Book <span id="serviceName">Service</span></h3>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="date" placeholder="Preferred Date" />
+            <button onclick="submitBooking()">Submit Booking</button>
+            <span class="close-booking" onclick="closeBookingForm()">×</span>
+        </div>
+    </div>
+    <section class="heart-split-contact" id="contact">
+        <div class="heart-contact-container">
+
+            <!-- Left: Heart Wedding Card -->
+            <div class="heart-side" data-aos="zoom-in">
+                <div class="heart-wrapper">
+                    <div class="heart-left">
+                        <img src="images/backFourrrrr.jpg" alt="Heart Left" />
+                    </div>
+                    <!-- ✅ This image should show always by default -->
+                    <div class="heart-center-image">
+                        <img src="images/suc10.jpg" alt="Center Photo" style="object-fit: contain;" />
+                    </div>
+                    <div class="heart-right">
+                        <img src="images/backTwo.jpeg" alt="Heart Right" />
+                    </div>
+
+                    <div class="heart-inner">
+                        <!-- This background image appears only on hover -->
+                        <img src="images/suc8.jpeg" alt="Heart Inside" />
+
+
+
+                        <!-- Quote appears on hover -->
+                        <div class="heart-quote">
+                            <p>"Every love story is beautiful, but ours is my favorite."</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Right: Contact Info -->
+            <div class="contact-side" data-aos="fade-left">
+                <h2 class="contact-heading">Reach Us</h2>
+                <p class="contact-description">
+                    Your forever starts here! 💌 We’re just a message away from helping you find your perfect match and
+                    planning your dream day.
+                    Get in touch with us through your favorite channel.
+                </p>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> support@matchit.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 98765 43210</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- 🌟 Main Footer -->
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-column" data-aos="fade-up">
+                <h2 class="footer-logo">Match <span>IT</span></h2>
+                <p class="footer-tagline">Where hearts meet and stories begin 💞</p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                <h3>Subscribe</h3>
+                <p>Get the latest matches & wedding tips </p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email" required />
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p id="newsletter-msg" class="newsletter-msg"></p>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                <h3>Connect</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Match IT. Made with 💖 for perfect matches.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- 🔝 Scroll to Top with Heart Icon -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-heartbeat"></i>
+    </div>
+
+
+    <!-- Floating Chat Icon -->
+    <button class="chat-icon" onclick="toggleChatBox()" title="chat">💬</button>
+    <!-- Chat Box -->
+    <div class="floating-chatbox" id="chatBox">
+        <div class="chat-header">
+            Match IT Assistant
+            <span onclick="toggleChatBox()" class="close-btn">&times;</span>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message received">Hi there! How can we help you? 😊</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type a message..." />
+            <button onclick="sendUserMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <!-- Other sections go here -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

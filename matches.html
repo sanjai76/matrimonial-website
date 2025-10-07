@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match IT | Find Your Perfect Match</title>
+    <link rel="stylesheet" href="matches.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Jost:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Match IT</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="matches.html" class="nav-link">Matches</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <img src="images/virushkaaaaa.jpg" class="avatar" alt="User" />
+    </header>
+
+    <!-- Hero Section -->
+    <section class="matches-hero-section parallax">
+        <div class="matches-hero-overlay"></div>
+
+
+
+        <!-- Bottom Floral Decorations -->
+        <img src="images/heart.gif" alt="Flower Left" class="flower-left" />
+        <img src="images/heart.gif" alt="Flower Right" class="flower-right" />
+
+        <div class="matches-hero-content" data-aos="fade-up">
+            <h1 class="matches-title">Find Your Perfect Match</h1>
+            <p class="matches-quote">“Every connection begins with one glance.”</p>
+
+            <div class="hero-divider"></div>
+
+            <p class="matches-description">
+                At <strong style="color: #d63384;">Match IT</strong>, we believe in more than just profiles — we believe
+                in potential.
+                Explore thousands of verified members who are looking for someone just like you.
+                Whether you're here for companionship, love, or forever, your journey begins now.
+            </p>
+
+            <p class="matches-sub-description">
+                Carefully curated suggestions, smart filters, and a team that supports your search for the one.
+                Trust, privacy, and authenticity — all wrapped in a heartfelt platform.
+            </p>
+        </div>
+    </section>
+
+    <!-- Matches Section -->
+    <section class="matches-section" id="matches">
+        <div class="matches-header" data-aos="fade-down">
+            <h2>Explore Featured Matches</h2>
+            <p>Search from thousands of verified profiles curated for you</p>
+            <input type="text" id="searchInput" placeholder="Search by name or interest..."
+                onkeyup="filterProfiles()" />
+        </div>
+
+        <div class="matches-grid" id="profileContainer">
+            <!-- Profile Cards -->
+            <div class="profile-card" data-name="Anjali Sharma" data-aos="zoom-in">
+                <img src="images/sai3.jpg" alt="Anjali">
+                <div class="profile-info">
+                    <h4>Anjali Sharma</h4>
+                    <p>UI Designer | Delhi</p>
+                    <button onclick="viewProfile('Anjali Sharma', 'UI Designer', 'Delhi', 'images/anjali.avif')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Rahul Mehra" data-aos="zoom-in">
+                <img src="images/b2.jpeg" alt="Rahul">
+                <div class="profile-info">
+                    <h4>Rahul Mehra</h4>
+                    <p>Software Engineer | Mumbai</p>
+                    <button onclick="viewProfile('Rahul Mehra', 'Software Engineer', 'Mumbai', 'images/rahul.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Priya Singh" data-aos="zoom-in">
+                <img src="images/sai.jpg" alt="Priya">
+                <div class="profile-info">
+                    <h4>Priya Singh</h4>
+                    <p>Doctor | Bengaluru</p>
+                    <button onclick="viewProfile('Priya Singh', 'Doctor', 'Bengaluru', 'images/priya.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Karan Verma" data-aos="zoom-in">
+                <img src="images/more4.jpg" alt="Karan">
+                <div class="profile-info">
+                    <h4>Karan Verma</h4>
+                    <p>Photographer | Chennai</p>
+                    <button onclick="viewProfile('Karan Verma', 'Photographer', 'Chennai', 'images/karan.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Sneha Rao" data-aos="zoom-in">
+                <img src="images/anjali.avif" alt="Sneha">
+                <div class="profile-info">
+                    <h4>Sneha Rao</h4>
+                    <p>Architect | Hyderabad</p>
+                    <button
+                        onclick="viewProfile('Sneha Rao', 'Architect', 'Hyderabad', 'images/sneha.jpg') ,'Sanjai'">View
+                        Profile</button>
+                </div>
+            </div>
+            <div class="profile-card" data-name="Anjali Sharma" data-aos="zoom-in">
+                <img src="images/sai3.jpg" alt="Anjali">
+                <div class="profile-info">
+                    <h4>Anjali Sharma</h4>
+                    <p>UI Designer | Delhi</p>
+                    <button onclick="viewProfile('Anjali Sharma', 'UI Designer', 'Delhi', 'images/anjali.avif')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Rahul Mehra" data-aos="zoom-in">
+                <img src="images/b2.jpeg" alt="Rahul">
+                <div class="profile-info">
+                    <h4>Rahul Mehra</h4>
+                    <p>Software Engineer | Mumbai</p>
+                    <button onclick="viewProfile('Rahul Mehra', 'Software Engineer', 'Mumbai', 'images/rahul.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Priya Singh" data-aos="zoom-in">
+                <img src="images/sai.jpg" alt="Priya">
+                <div class="profile-info">
+                    <h4>Priya Singh</h4>
+                    <p>Doctor | Bengaluru</p>
+                    <button onclick="viewProfile('Priya Singh', 'Doctor', 'Bengaluru', 'images/priya.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Karan Verma" data-aos="zoom-in">
+                <img src="images/more4.jpg" alt="Karan">
+                <div class="profile-info">
+                    <h4>Karan Verma</h4>
+                    <p>Photographer | Chennai</p>
+                    <button onclick="viewProfile('Karan Verma', 'Photographer', 'Chennai', 'images/karan.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="Sneha Rao" data-aos="zoom-in">
+                <img src="images/anjali.avif" alt="Sneha">
+                <div class="profile-info">
+                    <h4>Sneha Rao</h4>
+                    <p>Architect | Hyderabad</p>
+                    <button onclick="viewProfile('Sneha Rao', 'Architect', 'Hyderabad', 'images/sneha.jpg')">View
+                        Profile</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Profile Modal -->
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Profile Image">
+                <h3 id="modalName"></h3>
+                <p id="modalRole"></p>
+                <p id="modalLocation"></p>
+            </div>
+        </div>
+    </section>
+    <section class="plan-section">
+        <h2 class="plan-title">Premium Membership Plans</h2>
+
+        <div class="pricing-cards">
+
+            <!-- FREE Plan -->
+            <div class="plan-card free">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Free</h3>
+                        <p>Try the platform at no cost</p>
+                        <button class="btn btn-orange">Get Started</button>
+                        <h2>$0<span>/mo</span></h2>
+                        <ul>
+                            <li><span class="no">✘</span> 5 Premium Profiles /mo</li>
+                            <li><span class="yes">✔</span> View free profiles</li>
+                            <li><span class="no">✘</span> View contact details</li>
+                            <li><span class="no">✘</span> Send interest</li>
+                            <li><span class="no">✘</span> Start Chat</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/suc5.jpg" alt="Free Plan">
+                    </div>
+                </div>
+            </div>
+
+            <!-- GOLD Plan -->
+            <div class="plan-card gold">
+                <div class="most-popular">Most popular plan</div>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Gold</h3>
+                        <p>Best for active users</p>
+                        <button class="btn btn-red">Get Started</button>
+                        <h2>$349<span>/mo</span></h2>
+                        <ul>
+                            <li><span class="yes">✔</span> 20 Premium Profiles /mo</li>
+                            <li><span class="yes">✔</span> View free profiles</li>
+                            <li><span class="yes">✔</span> View contact details</li>
+                            <li><span class="yes">✔</span> Send interest</li>
+                            <li><span class="yes">✔</span> Start Chat</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/sanju.jpg" alt="Gold Plan">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATINUM Plan -->
+            <div class="plan-card platinum">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Platinum</h3>
+                        <p>Full access without limits</p>
+                        <button class="btn btn-pink">Get Started</button>
+                        <h2>$549<span>/mo</span></h2>
+                        <ul>
+                            <li><span class="yes">✔</span> 50 Premium Profiles /mo</li>
+                            <li><span class="yes">✔</span> View free profiles</li>
+                            <li><span class="yes">✔</span> View contact details</li>
+                            <li><span class="yes">✔</span> Send interest</li>
+                            <li><span class="yes">✔</span> Start Chat</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/rahulTwo.avif" alt="Platinum Plan">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- <section class="tips-blogs-section">
+        <h2 class="tips-title">💌 Smart Matrimony Tips & Advice</h2>
+        <div class="tips-blogs-wrapper">
+
+            <!Left: Trust & Safety Tips -->
+    <!-- <div class="tips-box" data-aos="fade-right">
+                <h3><i class="fa fa-shield-alt"></i> Trust & Safety</h3>
+                <ul>
+                    <li><i class="fa fa-check-circle"></i> Never share OTPs or passwords.</li>
+                    <li><i class="fa fa-check-circle"></i> Meet in public for the first time.</li>
+                    <li><i class="fa fa-check-circle"></i> Do a video call before meeting.</li>
+                    <li><i class="fa fa-check-circle"></i> Report suspicious profiles instantly.</li>
+                </ul>
+            </div> -->
+
+    <!-- Right: Relationship Advice Blogs -->
+    <!-- <div class="blog-box" data-aos="fade-left">
+                <h3><i class="fa fa-heart"></i> Love & Marriage Advice</h3>
+                <div class="blog-list">
+                    <div class="blog-item">
+                        <h4>💬 Top 5 Ways to Start a Conversation</h4>
+                        <p>Break the ice with these tried-and-true techniques...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                    <div class="blog-item">
+                        <h4>🎯 Things to Ask Before Saying Yes</h4>
+                        <p>Important questions to build a lifelong bond...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                    <div class="blog-item">
+                        <h4>🌸 Long Distance Relationship Tips</h4>
+                        <p>Make it work with love, trust & a little effort...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+    <section class="tips-blogs-section">
+        <h2 class="tips-title"> Smart Matrimony Tips & Advice</h2>
+
+        <!-- Decorative leaves -->
+        <img src="images/leafff-removebg-preview.png" class="leaf-left" alt="Leaf Decoration">
+        <img src="images/leafff-removebg-preview.png" class="leaf-right" alt="Leaf Decoration">
+
+        <div class="tips-blogs-wrapper">
+
+            <!-- Trust & Safety Tips -->
+            <div class="tips-box" data-aos="fade-right">
+                <h3><i class="fa fa-shield-alt"></i> Trust & Safety</h3>
+                <div class="safety-grid">
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fa fa-key"></i>
+                        <p>Never share OTPs or passwords.</p>
+                    </div>
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fa fa-users"></i>
+                        <p>Meet in public for the first time.</p>
+                    </div>
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fa fa-video"></i>
+                        <p>Do a video call before meeting.</p>
+                    </div>
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fa fa-flag"></i>
+                        <p>Report suspicious profiles instantly.</p>
+                    </div>
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fa fa-users"></i>
+                        <p>Meet in public for the first time.</p>
+                    </div>
+                    <div class="safety-card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fa fa-key"></i>
+                        <p>Never share OTPs or passwords.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Advice Section -->
+            <div class="blog-box" data-aos="fade-left">
+                <h3><i class="fa fa-heart"></i> Love & Marriage Advice</h3>
+                <div class="blog-list">
+                    <div class="blog-item" data-aos="fade-up" data-aos-delay="100">
+                        <h4>💬 Top 5 Ways to Start a Conversation</h4>
+                        <p>Break the ice with these tried-and-true techniques...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                    <div class="blog-item" data-aos="fade-up" data-aos-delay="200">
+                        <h4>🎯 Things to Ask Before Saying Yes</h4>
+                        <p>Important questions to build a lifelong bond...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                    <div class="blog-item" data-aos="fade-up" data-aos-delay="300">
+                        <h4>🌸 Long Distance Relationship Tips</h4>
+                        <p>Make it work with love, trust & a little effort...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="quiz-premium-section">
+        <h2 class="quiz-title"> Compatibility Quiz & Premium Boost</h2>
+
+        <div class="quiz-premium-wrapper">
+
+            <!-- LEFT: Mini Personality Quiz -->
+            <div class="quiz-box" data-aos="fade-right">
+                <h3><i class="fa fa-question-circle"></i> Quick Compatibility Quiz</h3>
+
+                <div class="quiz-card">
+                    <h4>Would you relocate after marriage?</h4>
+                    <div class="quiz-options with-results">
+                        <label><input type="radio" name="q1" onclick="showPollResult(this, 1)"> Yes
+                            <div class="poll-bar">
+                                <div class="fill" style="width: 65%"></div>
+                            </div>
+                            <span class="poll-percent">65%</span>
+                        </label>
+
+                        <label><input type="radio" name="q1" onclick="showPollResult(this, 2)"> No
+                            <div class="poll-bar">
+                                <div class="fill" style="width: 25%"></div>
+                            </div>
+                            <span class="poll-percent">25%</span>
+                        </label>
+
+                        <label><input type="radio" name="q1" onclick="showPollResult(this, 3)"> Maybe
+                            <div class="poll-bar">
+                                <div class="fill" style="width: 10%"></div>
+                            </div>
+                            <span class="poll-percent">10%</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Premium Upgrade Promotion -->
+            <div class="premium-box" data-aos="fade-left">
+                <h3><i class="fa fa-star"></i> Upgrade to Premium</h3>
+                <p>🔹 Get 3x more visibility</p>
+                <p>🔹 Appear on top of match searches</p>
+                <p>🔹 Unlock full contact details instantly</p>
+                <div class="premium-cta">
+                    <button>Upgrade Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="schedule-call-section">
+        <h2 class="call-title"> Book a Free Call with Our Matchmaking Expert</h2>
+
+        <div class="call-box" data-aos="zoom-in">
+
+            <div class="call-form">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your full name">
+
+                <label>Your Email</label>
+                <input type="email" placeholder="Enter your email address">
+
+                <label>Select Preferred Time</label>
+                <select>
+                    <option value="">-- Select a Time Slot --</option>
+                    <option>10:00 AM – 10:30 AM</option>
+                    <option>12:00 PM – 12:30 PM</option>
+                    <option>2:00 PM – 2:30 PM</option>
+                    <option>5:00 PM – 5:30 PM</option>
+                </select>
+
+                <button type="submit">Schedule My Call</button>
+            </div>
+
+            <div class="call-info">
+                <img src="images/backFourrrrr.jpg" alt="Assistant Call">
+                <p><i class="fa fa-check-circle"></i> One-on-One guidance from our team</p>
+                <p><i class="fa fa-phone"></i> Direct call scheduling without wait</p>
+                <p><i class="fa fa-lock"></i> 100% privacy guaranteed</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- 🌟 Main Footer -->
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-column" data-aos="fade-up">
+                <h2 class="footer-logo">Match <span>IT</span></h2>
+                <p class="footer-tagline">Where hearts meet and stories begin 💞</p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                <h3>Subscribe</h3>
+                <p>Get the latest matches & wedding tips </p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email" required />
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p id="newsletter-msg" class="newsletter-msg"></p>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                <h3>Connect</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Match IT. Made with 💖 for perfect matches.</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterProfiles() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const container = document.getElementById('profileContainer');
+            const profiles = Array.from(container.children);
+
+            const sorted = profiles.sort((a, b) => {
+                const aMatch = a.dataset.name.toLowerCase().includes(input);
+                const bMatch = b.dataset.name.toLowerCase().includes(input);
+                return bMatch - aMatch;
+            });
+
+            sorted.forEach(card => container.appendChild(card));
+        }
+
+        function viewProfile(name, role, location, imgSrc) {
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalRole').textContent = role;
+            document.getElementById('modalLocation').textContent = location;
+            document.getElementById('modalImage').src = imgSrc;
+            document.getElementById('profileModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('profileModal').style.display = 'none';
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script>
+        // Toggle Navbar
+
+        function toggleMenu(icon) {
+            const nav = document.getElementById('navbar-links');
+            nav.classList.toggle('show');
+            icon.classList.toggle('active');
+        }
+
+        // Smooth scroll and auto-close
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const target = this.getAttribute('href');
+
+                // Only prevent default if it's an in-page link
+                if (target.startsWith('#')) {
+                    e.preventDefault();
+
+                    const section = document.querySelector(target);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Close the menu on mobile
+                    document.getElementById('navbar-links').classList.remove('show');
+                    document.getElementById('hamburger').classList.remove('active');
+                }
+            });
+        });
+
+        // Scroll Shrink
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('shrink', window.scrollY > 50);
+        });
+    </script>
+    <script>
+        function showPollResult(selectedInput, index) {
+            const options = selectedInput.closest('.with-results').querySelectorAll('label');
+
+            options.forEach((option) => {
+                const bar = option.querySelector('.poll-bar');
+                const percent = option.querySelector('.poll-percent');
+                if (bar && percent) {
+                    bar.style.display = 'block';
+                    percent.style.display = 'inline-block';
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

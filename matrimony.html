@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrimony One-Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="matrimony.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Match IT</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#matches">Matches</a>
+            <a href="#register">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="max-width: 1515px;">
+        <div>
+            <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+            <p>Join 100,000+ happy members today</p>
+            <button onclick="scrollToRegister()">Register Now</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-text">ShaadiPerfect is India’s trusted matrimony site with verified profiles, easy
+            match-finding tools, and thousands of success stories. Join today and take the first step toward your
+            happily ever after!</p>
+    </section>
+
+    <section id="matches">
+        <h2 class="section-title">Top Matches</h2>
+        <div class="profiles">
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="profile">
+                <h3>Priya, 27</h3>
+                <p>Software Engineer, Chennai</p>
+            </div>
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="profile">
+                <h3>Rahul, 29</h3>
+                <p>Doctor, Bangalore</p>
+            </div>
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="profile">
+                <h3>Sneha, 26</h3>
+                <p>Designer, Mumbai</p>
+            </div>
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="profile">
+                <h3>Karan, 30</h3>
+                <p>Entrepreneur, Delhi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <h2 class="section-title">Register Now</h2>
+        <form class="register-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="number" placeholder="Age" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Looking for (e.g. Bride/Groom)" required>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ShaadiPerfect. All rights reserved.</p>
+        <p>Follow us: Facebook | Instagram | Twitter</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
